@@ -74,7 +74,8 @@ input[type=submit]:hover {
         }
         .form2 {
             float:right;
-            padding: 10px;
+            padding: 15px;
+            margin-right: 10px;
         }
         .action {
             padding: 50px;
@@ -83,6 +84,12 @@ input[type=submit]:hover {
             margin-left: auto;
             margin-right: auto;
             display: table;
+        }
+        #yummy_snack {
+            background-color: blanchedalmond;
+        }
+        #diving_course {
+            background-color: blanchedalmond;
         }
     </style>
 </head>
@@ -134,11 +141,11 @@ input[type=submit]:hover {
 
 <!--page Childbook-->
 <div id="child_book">
-    <h3 style="color:blue"><strong>Child Book</strong></h3>
+    <h3 style="color:blue"><strong>Child Book  </strong><span class="badge">2</span></h3>
         <p>Buku cerita dan kumpulan dongeng anak-anak pilihan berupa cerita rakyat (folklore), cerita dongeng (fairytale), dongeng sebelum tidur (bed times story) dan cerita fabel yang sangat menarik dari seluruh penjuru dunia untuk dibaca oleh anak Indonesia dari segala umur. Cerita tersebut umumnya adalah kumpulan cerita anak dan kumpulan dongeng klasik yang diterjemahkan dari bahasa asing (Inggris) ke bahasa Indonesia, atau cerita untuk anak dalam bahasa Inggris.</p>
         <p>Berikut adalah pilihan buku cerita anak yang tersedia:</p>
         <ul>
-            <li style="float:left"><strong>Cerita Anak bahasa Indonesia</strong>; Harga <i>IDR xxx/package</i></li>
+            <li style="float:left"><strong>Cerita Anak bahasa Indonesia</strong>; Harga <i>IDR xxx </i></li>
                 <!-- Trigger the modal with a button -->
                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal6" style="float:left; padding-top:5px">Read more</button>
                 <!-- Trigger the modal with a button -->
@@ -152,19 +159,72 @@ input[type=submit]:hover {
                             <h4 class="modal-title">Cerita Anak bahasa Indonesia</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Kumpulan cerita dongeng sepanjang masa, dengan tata bahasa yang santun, mudah dimengerti & mengandung pesan moral yang mendidik untuk Anak berbagai usia. 1 seri dari kumpulan ini terdiri dari 9 buku, masing-masing buku memuat 7 judul cerita, jumlah halaman 55halaman per buku.<br>
-                                <img src="bootstrap/image/chid%20book%201.jpg"; style="width:300px ; height:150px" title="cover & tampilan buku">
-                                <img src="bootstrap/image/child%20book%202.jpg"; style="width:300px ; height:150px" title="contoh cerita dalam buku">
-                            </p>
+                            <p>Kumpulan cerita dongeng sepanjang masa, dengan tata bahasa yang santun, mudah dimengerti & mengandung pesan moral yang mendidik untuk Anak berbagai usia. 1 seri dari kumpulan ini terdiri dari 9 buku, masing-masing buku memuat 7 judul cerita, jumlah halaman 55halaman per buku.</p> <br>
+                                <!--Carousel image mulai dr sini-->
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/chid%20book%201.jpg"; style="width:300px ; height:150px" title="cover & tampilan buku">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/child%20book%202.jpg"; style="width:300px ; height:150px" title="contoh cerita dalam buku">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/child%20book%203.jpg"; style="width:300px ; height:150px" title="ke-14 buku dalam 1 seri tersedia">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/child%20book%204.jpg"; style="width:300px ; height:150px" title="ke-14 buku dalam 1 seri tersedia">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                                </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Buy Now</button>
+                            <!--rencana buat form order dlm modal
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6_form" style="float:left; padding-top:5px">Buy Now</button>
+                            <div class="modal fade" id="myModal6_form" role="dialog">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Form Order [Cerita Anak bahasa Indonesia]</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Send e-mail to : yc.entreprener@yahoo.com</h2>
+                            <form action="MAILTO:yc.entreprener@yahoo.com" method="post" enctype="text/plain">
+                                Name:<br>
+                                <input type="text" name="name"><br>
+                                E-mail:<br>
+                                <input type="text" name="mail"><br>
+                                Order / Message Us:<br>
+                                <input type="text-area" name="Order/Message"><br><br>
+                                <input type="submit" value="Send">
+                            </form>
+                        </div>
+                    </div> -->
                         </div>
                     </div>
                 </div>
                 </div>
             <br><br>
-            <li style="float:left"><strong>Cerita Anak bahasa Inggris</strong>; Harga <i>IDR xxx/package</i></li>
+            <li style="float:left"><strong>Cerita Anak bahasa Inggris</strong>; Harga <i>IDR xxx </i></li>
                 <!-- Trigger the modal with a button -->
                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal7" style="float:left; padding-top:5px">Read more</button>
                 <!-- Trigger the modal with a button -->
@@ -218,53 +278,134 @@ input[type=submit]:hover {
                 </div>
                 </div>
         </ul>
-    <br><br>
-    <button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button>
+    <br> <br>
+    <!--Insert video-->
+    <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/kg9a60xwXhE?autoplay=0" frameborder="0"></iframe>
+    <br>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
 </div>
 <!--page Yummy Snack-->
 <div id="yummy_snack">
-    <h3 style="color:blue"><strong>Yummy Snack</strong></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-    <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="bootstrap/image/yummy%20snack%201.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/yummy%20snack%202.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/yummy%20snack%203.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/yummy%20snack%204.jpg" style="width:300px; height:150px">
-            </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-        </div>
-    </div>
+    <h3 style="color:blue"><strong>Yummy Snack  </strong><span class="badge">2</span></h3>
+        <p>Try our low calorie snack recipes that will keep makes you happy and healthy.</p>
+        <p>Berikut adalah menu Yummy Snack yang tersedia:</p>
+        <ul>
+            <li style="float:left"><strong>Semprong Wijen Istimewa</strong>; Harga <i>IDR xxx /250gram </i></li>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal8" style="float:left; padding-top:5px">Read more</button>
+                <!-- Trigger the modal with a button -->
+            
+                <div class="modal fade" id="myModal8" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Semprong Wijen Istimewa</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Berat bersih: 250gram</p>
+                            <p>Komposisi: Tepung, Gula, Wijen,<i>tanpa</i>bahan pengawet</p>
+                            <p>Catatan: Untuk menjaga kualitas rasa, order diterima max. 2hari sebelum tanggal pengiriman & akan dikemas dalam vacuum"food grade"plastic</p>
+                                <!--Carousel image mulai dr sini-->
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/yummy%20snack%201.jpg"; style="width:300px ; height:150px" title="Semprong Wijen Istimewa">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/yummy%20snack%202.jpg"; style="width:300px ; height:150px" title="semprong dalam kemasan 250gram">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <br><br>
+            <li style="float:left"><strong>Madu Hutan Merabu</strong>; Harga <i>IDR xxx /300mL</i></li>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal9" style="float:left; padding-top:5px">Read more</button>
+                <!-- Trigger the modal with a button -->
+            
+                <div class="modal fade" id="myModal9" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Madu Hutan Merabu</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Berat bersih: 300mL/jar</p>
+                            <p>Komposisi: 100% madu hutan murni, dari desa Merabu, Kab.Berau, Kalimantan Timur.</p>
+                            <p>Catatan: Simpan dalam suhu ruangan. Sajikan dingin, lebih nikmat untuk konsumsi langsung.</p><br>
+                                <!--Carousel image mulai dr sini-->
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/yummy%20snack%204.jpg"; style="width:150px ; height:300px" title="Label Asli produk madu hutan Merabu">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/yummy%20snack%205.jpg"; style="width:150px ; height:300px" title="Madu hutan Merabu dalam kemasan wadah kaca 300mL">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                                </div> <!--test carousel sampai sini-->
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </ul>
+    <br><br>
+    <!--Insert video-->
+    <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/CxpcYZWO8j8?autoplay=0" frameborder="0"></iframe>
+    <br>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
 </div>
     <!-- page Island Exploration Trip-->
 <div id="island_exploration_trip">
-    <h3 style="color:blue"><strong>Island Exploration / Live In / Volunteering Trip</strong></h3>
+    <h3 style="color:blue"><strong>Island Exploration / Live In / Volunteering Trip  </strong><span class="badge">5</span></h3>
         <p><strong>Island Exploration Trip</strong> adalah kegiatan menjelajah destinasi wisata dimana fasilitas akomodasi pada daerah destinasinya masih sangat terbatas, sehingga diperlukan survival lifestyle untuk bisa menikmati trip jenis ini.<br>
-            <strong>Live In</strong> merupakan trip untuk mengenal kebiasaan & budaya lokal setempat dan bersedia ikut berpartisipasi secara langsung ditempat dan dapat menikmati keunikan pengalamannya secara positif.<br>
-            <strong>Volunteering trip</strong> merupakan 
+            <strong>Live In</strong> merupakan trip untuk mengenal kebiasaan & budaya lokal setempat dan bersedia ikut berpartisipasi secara langsung dan dapat menikmati keunikan pengalamannya secara positifdi lokasi pilihan Anda, tanpa ada persiapan acara/kegiatan yang spesifik untuk Anda.<br>
+            <strong>Volunteering trip</strong> merupakan trip untuk berpartisipasi secara khusus dalam misi kegiatan yang sedang berjalan dilokasi pilihan Anda yang telah dipersiapkan & bekerjasama dengan organisasi/lembaga setempat yang bersedia bekerjasama dengan volunteer. 
         </p>
         <br>
         <p>Here are list of our off-the-beaten-track destination for your exploration:</p>
@@ -283,10 +424,34 @@ input[type=submit]:hover {
                             <h4 class="modal-title">Belitung Island</h4>
                         </div>
                         <div class="modal-body">
-                            <p>Sejak melejitnya film "Laskar Pelangi" kota ini semakin ramai disambangi wisatawan yang ingin melihat langsung keindahan Belitung. Terdapat berbagai tujuan wisata di Tanjung Pandan yang dapat disambangi, baik itu untuk bermain di pantainya atau menyelam dan snorkeling. Anda yang hobi fotografi pun akan terpuaskan di sini karena batu granit, laut, dan langitnya begitu ikonik.<br>
-                                <img src="bootstrap/image/Belitung1.jpg"; style="width:300px ; height:150px" title="Pantai Tanjung Tinggi">
-                                <img src="bootstrap/image/belitung2.jpg"; style="width:300px ; height:150px" title="Pulau Lengkuas">
-                            </p>
+                            <p>Sejak melejitnya film "Laskar Pelangi" kota ini semakin ramai disambangi wisatawan yang ingin melihat langsung keindahan Belitung. Terdapat berbagai tujuan wisata di Tanjung Pandan yang dapat disambangi, baik itu untuk bermain di pantainya atau menyelam dan snorkeling. Anda yang hobi fotografi pun akan terpuaskan di sini karena batu granit, laut, dan langitnya begitu ikonik.</p>
+                            <p>Pilihan paket wisata island explorer ke Belitung, mulai dari 3D2N dan 4D3N.</p><br>
+                                <!--Carousel image mulai dr sini-->
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/Belitung1.jpg"; style="width:300px ; height:150px" title="Pantai Tanjung Tinggi">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/belitung2.jpg"; style="width:300px ; height:150px" title="Pulau Lengkuas">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                                </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Book Now</button>
@@ -308,10 +473,36 @@ input[type=submit]:hover {
                             <h4 class="modal-title">Lampung (Way Kambas & T.Kiluan)</h4>
                         </div>
                         <div class="modal-body">
-                            <p><strong>TN Way Kambas</strong> menjadi rumah sekaligus pusat pelatihan dan taman bermain gajah sumatera. Ada sekitar 200 gajah sumatera (Elephas maximus sumatranensis) yang menjadikan hutan ini sebagai rumah mereka.<br><strong>Teluk Kiluan</strong>, merupakan desa pesisir yang identik dengan atraksiuntuk melihat kawanan ikan lumba-lumba yang sering berenang berkelompok & menyapa wisatawan dengan pola tingkah laku mereka secara natural di perairan terbuka.  
-                                <img src="bootstrap/image/way%20kambas1.jpg"; style="width:300px ; height:150px" title="TN Way Kambas">
-                                <img src="bootstrap/image/kiluan1.jpg"; style="width:300px ; height:150px" title="Teluk Kiluan">
-                            </p>
+                            <p><strong>TN Way Kambas</strong> menjadi rumah sekaligus pusat pelatihan dan taman bermain gajah sumatera. Ada sekitar 200 gajah sumatera (Elephas maximus sumatranensis) yang menjadikan hutan ini sebagai rumah mereka.<br><strong>Teluk Kiluan</strong>, merupakan desa pesisir yang identik dengan atraksiuntuk melihat kawanan ikan lumba-lumba yang sering berenang berkelompok & menyapa wisatawan dengan pola tingkah laku mereka secara natural di perairan terbuka.</p>
+                            <p>Pilihan paket wisata ke Lampung, terdiri dari:<br>
+                                1) <i>Island exploration trip</i>: mulai dari 3D2N sampai 5D4N.<br>
+                                2) <i>Volunteering trip</i>: mulai dari 7-21hari di TN Way Kambas.</p>
+                            <!--Carousel image mulai dr sini-->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/way%20kambas1.jpg"; style="width:300px ; height:150px" title="TN Way Kambas">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/way%20kambas2.jpg"; style="width:300px ; height:150px" title="Teluk Kiluan">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Book a Trip Now</button>
@@ -333,11 +524,40 @@ input[type=submit]:hover {
                             <h4 class="modal-title">East Java (Baluran National Park)</h4>
                         </div>
                         <div class="modal-body">
-                            <p> <strong>TN Baluran</strong> atau yang juga disebut Little Africa in Java, terdapat beberapa destinasi alam yang bisa anda kunjungi. Dari luasnya padang Savana Bekol, sampai lebatnya hutan hijau Evergreen Forest, hingga keindahan bawah laut di Bama. 
-                                <img src="bootstrap/image/baluran1.jpg"; style="width:300px ; height:150px" title="TN Baluran landscape">
-                                <img src="bootstrap/image/baluran2.jpg"; style="width:300px ; height:150px" title="TN Baluran (kawanan hewan)">
-                                <img src="bootstrap/image/baluran3.jpg"; style="width:300px ; height:150px" title="TN Baluran underwater">
-                            </p>
+                            <p> <strong>TN Baluran</strong> atau yang juga disebut Little Africa in Java, terdapat beberapa destinasi alam yang bisa anda kunjungi. Dari luasnya padang Savana Bekol, sampai lebatnya hutan hijau Evergreen Forest, hingga keindahan bawah laut di Bama.</p>
+                            <p>Pilihan paket wisata ke TN Baluran, terdiri dari:<br>
+                                1) <i>Island exploration trip</i>: mulai dari 3D2N sampai 5D4N.<br>
+                                2) <i>Volunteering trip</i>: mulai dari 5-14hari di TN Baluran.</p>
+                            <!--Carousanel image mulai dr sini-->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/baluran1.jpg"; style="width:300px ; height:150px" title="TN Baluran landscape">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/baluran2.jpg"; style="width:300px ; height:150px" title="TN Baluran (kawanan hewan)">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/baluran3.jpg"; style="width:300px ; height:150px" title="TN Baluran underwater (Bama)">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Book a Trip Now</button>
@@ -361,14 +581,50 @@ input[type=submit]:hover {
                         <div class="modal-body">
                             <p> <strong>Pulau Menjangan Bali</strong> merupakan tempat yang wajib di kunjungi bagi pecinta Snorkeling dan Diving di Bali (menurut News Discovery pulau menjangan masuk kedalam 10 best snorkeling spots in the World), dan di huni kawanan rusa atau kijang liar.<br>
                                 <strong>Amed</strong> memiliki keindahan pantai dengan sunrise-nya, juga kehidupan bawah laut menawarkan tempat yang bagus untuk snorkeling, menyelam & tracking ke gunung Abang utk pemandangan sunrise-nya yang memukau.<br>
-                                <strong>Nusa Penida</strong> bertekstur perbukitan dan tebing sehingga menjadi daerah wisata yang unik dari segi landscape scenery maupun keindahan potensi alam bawah lautnya & tantangan pertualangan menuju kesana dari daratan utama pulau Bali.
-                                <img src="bootstrap/image/menjangan1.jpg"; style="width:300px ; height:150px" title="TN Menjangan (kawanan menjangan)">
-                                <img src="bootstrap/image/menjangan2.jpg"; style="width:300px ; height:150px" title="TN Menjangan (pura hindu dalam kawasan TN)">
-                                <img src="bootstrap/image/amed2.jpg"; style="width:300px ; height:150px" title="pantai Amed & gunung Abang">
-                                <img src="bootstrap/image/amed1.jpg"; style="width:300px ; height:150px" title="underwater temple">
-                                <img src="bootstrap/image/penida1.jpg"; style="width:300px ; height:150px" title="pemandangan alam pulau Nusa Penida">
-                                <img src="bootstrap/image/penida2.jpg"; style="width:300px ; height:150px" title="scubadiving in Nusa Penida">
-                            </p>
+                                <strong>Nusa Penida</strong> bertekstur perbukitan dan tebing sehingga menjadi daerah wisata yang unik dari segi landscape scenery maupun keindahan potensi alam bawah lautnya & tantangan pertualangan menuju kesana dari daratan utama pulau Bali.</p>
+                            <p>Pilihan paket wisata island exploring di Bali, mulai dari 3D2N sampai 9D8N.</p>
+                            <!--Carousanel image mulai dr sini-->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/menjangan1.jpg"; style="width:300px ; height:150px" title="TN Menjangan (kawanan menjangan)">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/menjangan2.jpg"; style="width:300px ; height:150px" title="TN Menjangan (pura hindu dalam kawasan TN)">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/amed2.jpg"; style="width:300px ; height:150px" title="pantai Amed & gunung Abang">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/amed1.jpg"; style="width:300px ; height:150px" title="underwater temple di Amed">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/penida1.jpg"; style="width:300px ; height:150px" title="pemandangan alam pulau Nusa Penida">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/penida2.jpg"; style="width:300px ; height:150px" title="scubadiving in Nusa Penida">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Book a Trip Now</button>
@@ -393,14 +649,53 @@ input[type=submit]:hover {
                             <p> <strong>Tanjung Redeb</strong>merupakan ibukota kabupaten Berau, Kalimantan Timur & merupakan gerbang utama menuju kawasan wisata sekitarnya di karena terdapat bandar udara Kalimarau disana. <br>
                                 <strong>Kakaban</strong>merupakan pulau unik, dimana terdapat danau air payau di tengah pulau yang mempunyai populasi biota endemik 4jenis ubur-ubur tidak menyengat. Keunikan kondisi ini hanya dimiliki oleh 2 tempat di duni, yaitu di danau Kakaban & negara Palau di Kep.Samudra Pasifik.<br>
                                 <strong>Sangalaki</strong>merupakan pulau konservasi tempat penangkaran penyu, Anda dapat mengamati proses penyu yang naik ke darat untuk bertelur pd dini hari, pemindahan telur penyu ke area aman dari predator, kolam perawatan penyu hingga usia aman utk dilepas kembali ke habitat alamnya.<br>
-                                <strong>Biduk-biduk</strong> merupakan kawasan desa dengan potensi wisata danau Labuan Cermin yang terdiri dari air tawar pada bagian permukaan & air asin pada bagain dasar danau tersebut & habitat endemik kera bekantan.
-                                <img src="bootstrap/image/island_exploration_trip2.jpg"; style="width:300px ; height:150px" title="stingless jellyfish di danau Kakaban">
-                                <img src="bootstrap/image/island_exploration_trip3.jpg"; style="width:300px ; height:150px" title="monumen gajah terbang di kab.Berau">
-                                <img src="bootstrap/image/island_exploration_trip4.jpg"; style="width:300px ; height:150px" title="Masjid Agung Tj.Redeb">
-                                <img src="bootstrap/image/IMG_1200.jpg"; style="width:300px ; height:150px" title="Danau Labuan Cermin">
-                                <img src="bootstrap/image/sangalaki1.jpg"; style="width:300px ; height:150px" tilte="Pulau Sangalaki (penangkaran penyu)">
-                                <img src="bootstrap/image/merabu1.gif"; style="width:300px ; height:150px" title="peternak madu di desa Merabu">
-                            </p>
+                                <strong>Biduk-biduk</strong> merupakan kawasan desa dengan potensi wisata danau Labuan Cermin yang terdiri dari air tawar pada bagian permukaan & air asin pada bagain dasar danau tersebut & habitat endemik kera bekantan.</p>
+                            <p>Pilihan paket wisata ke East Kalimantan, terdiri dari:<br>
+                                1) <i>Island exploration trip</i>: mulai dari 3D2N sampai 9D8N.<br>
+                                2) <i>Volunteering trip</i>: mulai dari 7-25hari di beberapa desa untuk mengajar komputer/bahasa inggris di Sekolah Dasar di kota Tj.Redeb, atau membantu peternak lebah di desa Merabu, dengan persiapan pembekalan materi khusus.<br>
+                                3) <i>Live-In trip</i>: mulai dari 7-14hari tinggal bersama & mengikuti aktivitas sehari-hari keluarga pekerja lahan/nelayan di desa Biduk-Biduk, Kab.Berau.</p>
+                            <!--Carousanel image mulai dr sini-->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/IMG_1042.JPG"; style="width:300px ; height:150px" title="pulau Derawan">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/island_exploration_trip2.jpg"; style="width:300px ; height:150px" title="stingless jellyfish di danau Kakaban">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/IMG_1224.JPG"; style="width:300px ; height:150px" title="masjid agung di Tanjung Redeb">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/IMG_1200.jpg"; style="width:300px ; height:150px" title="desa Biduk-Biduk (Labuan Cermin)">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/sangalaki1.jpg"; style="width:300px ; height:150px" title="Pulau Sangalaki, pulau konservasi penyu.">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/merabu1.gif"; style="width:300px ; height:150px" title="peternak lebah di desa Merabu, Kab.Berau">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -418,21 +713,30 @@ input[type=submit]:hover {
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
     <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="bootstrap/image/island_exploration_trip1.jpg" style="width:300px; height:150px">
+                <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/sCmfc4W4pF0?autoplay=0" frameborder="0" title="Belitung Island"></iframe>
             </div>
             <div class="item">
-                <img src="bootstrap/image/island_exploration_trip2.jpg" style="width:300px; height:150px">
+                <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/zvrFzLzgiGk?autoplay=0" frameborder="0" title="Way Kambas & Teluk Kiluan"></iframe>
             </div>
             <div class="item">
-                <img src="bootstrap/image/island_exploration_trip3.jpg" style="width:300px; height:150px">
+                <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/1Q4Ko_O_Nbo?autoplay=0" frameborder="0" title="TN Baluran, East Java"></iframe>
             </div>
             <div class="item">
-                <img src="bootstrap/image/island_exploration_trip4.jpg" style="width:300px; height:150px">
+                <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/dKX2JJ1yhIU?autoplay=0" frameborder="0" title="Bali Island underwater"></iframe>
+            </div>
+            <div class="item">
+                <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/ZUh1ST1bH1Q?autoplay=0" frameborder="0" title="East Kalimantan trip"></iframe>
             </div>
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -445,97 +749,146 @@ input[type=submit]:hover {
     </a>
         </div>
     </div>
+    <br>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
 </div>
 <!--page Diving_Course-->
-<div id="diving_course" style="background-color:pink">
-    <h3 style="color:blue"><strong>Scuba Diving Course</strong></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <br>
-        <p><strong>Depth:</strong> max. 18 m. (max. 12 m. for 10 and 11 year olds)
-        <br>
-        <strong>Duration:</strong> 3-4 days, 4 dives
-        <br>
-        <strong>Who can join:</strong> You must be in good health, be able to swim, 15 years or older for sign up scubadiving course.</p>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-    <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="bootstrap/image/diving_course1.jpg" style="width:300px; height:150px">
+<div id="diving_course">
+    <h3 style="color:blue"><strong>Scuba Diving Course  </strong><span class="badge">1</span></h3>
+        <p>Get introduce to underwater world, get certified diver license for fun & safety reason, enjoy the bubbles...</p>
+        <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal10" style="margin-left:auto; margin-right:auto; display:table">Sign up Scubadiving Course</button>
+            <br>
+            <!-- Trigger the modal with a button -->
+            <div class="modal fade" id="myModal10" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Scuba Diving Course</h4>
+                    </div>
+                        <div class="modal-body">
+                            <p>What you will learn by taking Scuba Diving course:<br>
+                                1)Knowledge Development (online, independent study or in a classroom) to understand basic principles of scuba diving.<br>
+                                2) Confined Water Dives to learn basic scuba skills.<br>
+                                3)Open Water Dives to use your skills and explore.</p>
+                            <p><strong>Duration:</strong> 3-4 days, 4 dives<br>
+                                <strong>Who can join:</strong> You must be in good health, be able to swim, 15 years or older for sign up scubadiving course.</p>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="bootstrap/image/diving_course2.jpg" style="width:600px; height:300px" title="Pool session class">
+                            </div>
+                            <div class="item">
+                                <img src="bootstrap/image/diving_course3.jpg" style="width:600px; height:300px" title="Open water trip">
+                            </div>
+                            <div class="item">
+                                <img src="bootstrap/image/diving_course4.jpg" style="width:600px; height:300px" title="Congratz! You're certified PADI diver now">
+                            </div>
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up Course</button>
+                        </div>
+                </div>
             </div>
-            <div class="item">
-                <img src="bootstrap/image/diving_course2.jpg" style="width:300px; height:150px">
             </div>
-            <div class="item">
-                <img src="bootstrap/image/diving_course3.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/diving_course4.jpg" style="width:300px; height:150px">
-            </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-        </div>
-    </div>
+            <iframe id="ytplayer" type="text/html" width="600" height="300"
+  src="https://www.youtube.com/embed/pYb8jzB5vs0?autoplay=0" frameborder="0"></iframe>
+            <br>
+            <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
 </div>
 <!--page Floral_course-->
 <div id="floral_course">
-    <h3 style="color:blue"><strong>Floral Course</strong></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <h3 style="color:blue"><strong>Floral Course  </strong><span class="badge">1</span></h3>
+        <p>We offers courses in flower arranging and the essentials of the trade for business or pleasure, Wedding flowers and event flowers for hobbyists and professionals.</p>
+        <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal11" style="margin-left:auto; margin-right:auto; display:table">Sign up Floral Course</button>
+            <br>
+            <!-- Trigger the modal with a button -->
+            <div class="modal fade" id="myModal11" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Floral Course</h4>
+                    </div>
+                        <div class="modal-body">
+                            <p>We offers courses in flower arranging and the essentials of the trade for business or pleasure, Wedding flowers and event flowers for hobbyists and professionals.</p>
+                            <p>Classes of floral course devide into:<br>
+                                1) <i>Hobbyists class</i>: 7x meetings.<br>
+                                2) <i>Professionals class</i>: 12x meetings.</p>
+                            <!--Carousel image mulai dr sini-->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="bootstrap/image/floral%20course%201.jpg"; style="width:300px ; height:150px" title="hobbyists class ambience">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/floral%20course%202.jpg"; style="width:300px ; height:150px" title="hobbyists class result">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/floral%20course%203.jpg"; style="width:300px ; height:150px" title="professinals class ambience">
+                                    </div>
+                                    <div class="item">
+                                        <img src="bootstrap/image/floral%20course%204.jpg"; style="width:300px ; height:150px" title="prossenionals class session">
+                                    </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="index.html/.form_contact"><button type="button" class="btn btn-default" data-dismiss="modal">Sign Up Course</button></a>
+                        </div>
+                </div>
+            </div>
+            </div>
     <!--Insert video-->
     <iframe id="ytplayer" type="text/html" width="600" height="300"
-  src="https://www.youtube.com/embed/kg9a60xwXhE?autoplay=0" frameborder="0"></iframe>
+  src="https://www.youtube.com/embed/zUxIzZpryKQ?autoplay=0" frameborder="0"></iframe>
     <!--kl angka 0 pada autoplay=1, maka video akan langsung autoplay"-->
+    <br>
     <!--video sampai disini-->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-    <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="bootstrap/image/floral%20course%201.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/floral%20course%202.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/floral%20course%203.jpg" style="width:300px; height:150px">
-            </div>
-            <div class="item">
-                <img src="bootstrap/image/floral%20course%204.jpg" style="width:300px; height:150px">
-            </div>
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-        </div>
-    </div>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
 </div>
 <!--form contact-->
 <div class="container">
-<div form_contact>
+<div class="form_contact">
 <h1 style="color:blue"><strong>Contact Information :</strong></h1>
     <h3 style="color:white"><strong>YC Entrepreneur</strong></h3>
     <dt style="color:white">DiLo Bogor<br>
@@ -562,7 +915,8 @@ input[type=submit]:hover {
     </select>
       </div>
     <div class="form2">
-        <label for="message">Your Message<textarea style="padding:25%"></textarea></label>
+        <label for="message">Your Message</label><br>
+        <textarea class="form-control" style="padding:35%"></textarea>
     </div>
     <input type="submit" value="Submit" >
   </form>
