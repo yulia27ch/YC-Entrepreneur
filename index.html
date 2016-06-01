@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
     <link rel="stlesheet" type="text/css" href="index.css">
     
     <!--kl mau buat CSS, harus di dlm tag style-->
@@ -27,21 +28,25 @@
         }
   .icon_footer {
             float:right;
-            margin-top: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
   .container {
-      background-color: darkorange;
+      background-color:orange;
       height: auto;
       padding-top: 10px;
       padding-bottom: 10px;
       margin-top:20px;
+      margin-bottom: 20px;
       border-radius: 25px;
         }
 .icon_footer{
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 10px;
     position: center;
+    float:left;
+    margin-left: 40%;
         }
 input[type=text], select {
     width: 35%;
@@ -85,11 +90,22 @@ input[type=submit]:hover {
             margin-right: auto;
             display: table;
         }
+        #child_book {
+            background-color: aliceblue;
+        }
         #yummy_snack {
             background-color: blanchedalmond;
         }
+        #island_exploration_trip {
+            background-color: aliceblue;
+        }
         #diving_course {
             background-color: blanchedalmond;
+        }
+        #floral_course {
+            background-color: aliceblue;
+        }
+        body { background-image: url(bootstrap/image/mainbackground2.jpg);
         }
     </style>
 </head>
@@ -104,7 +120,7 @@ input[type=submit]:hover {
 <!--menu button-->
         <div class="btn-group middle bg-img">
             <a href="#child_book" style="padding: 30px"><img src="bootstrap/image/childbook.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" data-description="Child's Book" title="Child's Book"></a>
-            <a href="#yummy_snack" style="padding: 30px"><img src="bootstrap/image/yummysnack.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" title="Yummy Snack"></a>
+            <a href="#yummy_snack" style="padding: 30px"><img src="bootstrap/image/yummy.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" title="Yummy Snack"></a>
             <a href="#island_exploration_trip" style="padding: 30px"><img src="bootstrap/image/explorer_man.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" title="Travel Services"></a>
             <a href="#diving_course" style="padding: 30px"><img src="bootstrap/image/diving_course.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" title="Diving Course"></a>
             <a href="#floral_course" style="padding: 30px"><img src="bootstrap/image/floral_course.jpg" class="img-circle" alt="YC Entrepreneur" width="100" height="100" title="Floral Course"></a>
@@ -130,15 +146,6 @@ input[type=submit]:hover {
         </div>
         <button type="button" class="btn btn-primary btn-lg">Contact</button>
     </div> -->
-
-<!--buat menu pake image button--> 
-<!--
-<a href="#books"><img src="bootstrap/image/icon1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100"></a>
-<a href="#healthy_snack"><img src="bootstrap/image/icon2.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100"></a>
-<a href="#island_exploration_trip"><img src="bootstrap/image/icon3.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100"></a>
-<a href="#live_in_trip"><img src="bootstrap/image/icon1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100"></a>
-<a href="#floral_course"><img src="bootstrap/image/icon2.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100"></a> -->
-
 <!--page Childbook-->
 <div id="child_book">
     <h3 style="color:blue"><strong>Child Book  </strong><span class="badge">2</span></h3>
@@ -196,29 +203,34 @@ input[type=submit]:hover {
                                 </div>
                         </div>
                         <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Buy Now</button>
-                            <!--rencana buat form order dlm modal
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6_form" style="float:left; padding-top:5px">Buy Now</button>
+                        <button button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal6_form" style="float:right; padding-top:5px">Buy Now</button>
+                            <!--content form dlm modal, mulai dr sini-->
                             <div class="modal fade" id="myModal6_form" role="dialog">
                                 <div class="modal-dialog">
                                 <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Form Order [Cerita Anak bahasa Indonesia]</h4>
-                        </div>
-                        <div class="modal-body">
-                            <h2>Send e-mail to : yc.entreprener@yahoo.com</h2>
-                            <form action="MAILTO:yc.entreprener@yahoo.com" method="post" enctype="text/plain">
-                                Name:<br>
-                                <input type="text" name="name"><br>
-                                E-mail:<br>
-                                <input type="text" name="mail"><br>
-                                Order / Message Us:<br>
-                                <input type="text-area" name="Order/Message"><br><br>
-                                <input type="submit" value="Send">
-                            </form>
-                        </div>
-                    </div> -->
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="text-align:left">Form Order [Cerita Anak bahasa Indonesia]</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4 style="text-align:left">Send e-mail to : yc.entreprener@yahoo.com</h4>
+                                    <form action="MAILTO:yc.entreprener@yahoo.com" method="post" enctype="text/plain" style="text-align:left; text-size:10px">
+                                    Name:<br>
+                                    <input type="text" name="name"><br>
+                                    E-mail:<br>
+                                    <input type="text" name="mail"><br>
+                                    Order / Message Us:<br>
+                                    <input type="text" name="Order/Message" style="padding:80px"><br><br>
+                                    <input type="submit" value="Send">
+                                    </form>
+                                </div>
+                                    <!-- Perlu gak ya? 
+                                <div class="modal-footer">
+                                    <button button type="submit" class="btn btn-default" data-toggle="modal" data-target="#myModal6_form" style="float:right; padding-top:5px">Send</button>
+                                </div> -->
+                                </div> <!--form dlm modal sampai dsini-->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,7 +281,7 @@ input[type=submit]:hover {
                                     <span class="sr-only">Next</span>
                                 </a>
                                 </div>
-                                </div> <!--test carousel sampai sini-->
+                                </div> <!--carousel sampai sini-->
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Buy Now</button>
@@ -283,7 +295,7 @@ input[type=submit]:hover {
     <iframe id="ytplayer" type="text/html" width="600" height="300"
   src="https://www.youtube.com/embed/kg9a60xwXhE?autoplay=0" frameborder="0"></iframe>
     <br>
-    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a><br>
 </div>
 <!--page Yummy Snack-->
 <div id="yummy_snack">
@@ -398,7 +410,7 @@ input[type=submit]:hover {
     <iframe id="ytplayer" type="text/html" width="600" height="300"
   src="https://www.youtube.com/embed/CxpcYZWO8j8?autoplay=0" frameborder="0"></iframe>
     <br>
-    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a><br>
 </div>
     <!-- page Island Exploration Trip-->
 <div id="island_exploration_trip">
@@ -814,7 +826,7 @@ input[type=submit]:hover {
             <iframe id="ytplayer" type="text/html" width="600" height="300"
   src="https://www.youtube.com/embed/pYb8jzB5vs0?autoplay=0" frameborder="0"></iframe>
             <br>
-            <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
+            <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a> <br>
 </div>
 <!--page Floral_course-->
 <div id="floral_course">
@@ -884,7 +896,7 @@ input[type=submit]:hover {
     <!--kl angka 0 pada autoplay=1, maka video akan langsung autoplay"-->
     <br>
     <!--video sampai disini-->
-    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a>
+    <a href="index.html"><button type="button" class="btn btn-default" data-dismiss="modal" href="#" style="margin-left:auto; margin-right:auto; display:table">Back to Main Menu</button></a> <br>
 </div>
 <!--form contact-->
 <div class="container">
@@ -922,7 +934,6 @@ input[type=submit]:hover {
   </form>
 </div>
 </div>
-    
 </body>
 
 <footer>
@@ -930,7 +941,7 @@ input[type=submit]:hover {
       <a href="https://www.facebook.com/"><img alt="facebook page" src="bootstrap/image/facebook%20icon.jpg" style="width:50px; height:50px"></a>
       <a href="https://www.instagram.com/"><img alt="instagram page" src="bootstrap/image/instagram%20icon.jpg" style="width:50px; height:50px"></a>
       <a href="https://www.linkedin.com/uas/login"><img alt="linkedin page" src="bootstrap/image/linkedin%20icon.png" style="width:50px; height:50px"></a>
-      <h3>YC Entrepreneur</h3>
+      <a href="mailto:yc.entrepreneur@yahoo.com"><img alt="email message" src="bootstrap/image/email%20icon.png" style="width:50px; height:50px"></a>
     </div>
 </footer>
 </html>
